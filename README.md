@@ -15,7 +15,19 @@ There's a picture included called 'festival.jpg'. I made the picture and allow y
 See additional information in the LICENSE file.
 
 ##preview
+![Preview](Preview.png "Preview (Safari on Mac OS X)")
+
+![HTML5 Notifications in Safari](HTML5_Notifications.png "HTML5 Notifications (Safari)")
+
 Visit my website for a [live preview](http://nowplaying.jh0.eu "live preview").
+
+##FAQ
+####Why does it take so long to refresh?
+It gets the new meta information (song, album, artist, cover) every 4 seconds (the background refreshes every 5 seconds) to save the lastfm API from getting overloaded. It's also more reliable when it takes longer. You can change it in `index.html` if you know, what you're doing.
+####How can I change the period of the top artists statistics?
+Change `$period`in `lastfm.php` to either `overall`, `7day`, `1month`, `3month`, `6month or `12month`.
+####I found a bug!
+[email me!](mailto:nowplaying@jh0.eu "write me an email!")
 
 Have fun, 
 

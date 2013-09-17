@@ -12,7 +12,7 @@
 	     
 		       $("#nowplaying").load("data.php");
 		       $("#title").load('data.php?get=title');
-		       
+
 		       var refreshMETA = setInterval(function() {
 		       	var songBefore = $('.song').text();
 		       	var artistBefore = $('.artist').text();
@@ -30,6 +30,12 @@
 		       
 	      });
 	      
+	      function checkInstallation(){
+				if($('.artist').text() == "" && $('.album').text() == "" && $('.song').text() == ""){
+					$('title').append(' | Check your installation!');
+				}
+			}
+			
 	      function notify(){
 			  if (window.webkitNotifications.checkPermission() == 0) {
 			    var notification = window.webkitNotifications.createNotification('chord.png', $(".song").text(), $(".artist").text());
@@ -65,12 +71,6 @@
 			window.location = "http://www.whatbrowser.org/intl/de/";
 			else
 			alert ("Es funktioniert wahrscheinlich nicht einmal richtig mit dem Internet Explorer. Go, fuck yourself.")
-			}
-		</script>
-		<script>
-			/* is installed? */
-			if($('.artist').text() == "" && $('.album').text() == "" && $('.song').text() == ""){
-				$('h1').append('Check your installation!');
 			}
 		</script>
 	</body>
