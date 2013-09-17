@@ -3,10 +3,10 @@
 	<head>
 		<title id="title">#nowplaying</title>
 		<meta charset="UTF-8">
-		<meta name="author" content="Jannis Hutt">
-		<link rel="stylesheet" href="np.css.php" type="text/css" />
+		<meta name="author" content="#nowplaying by Jannis Hutt">
+		<link rel="stylesheet" href="np.css.php" type="text/css">
 		<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:300,400' rel='stylesheet' type='text/css'>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script>
 	     $(document).ready(function() {
 	     
@@ -22,11 +22,11 @@
 		          	}
 		          });
 		          $("#title").load('data.php?get=title');
-		       }, 2000);
+		       }, 4000);
 		       
 		       var refreshARTWORK = setInterval(function() {
 			      $('#stylesheet').load('data.php?get=stylesheet');
-		       }, 1000);
+		       }, 5000);
 		       
 	      });
 	      
@@ -52,9 +52,9 @@
 					<div id="cover">
 						<img src="" height="100px" width="100px" />
 					</div>
-					<p class="artist">             </p>
-					<p class="song">               </p>
-					<p class="album">                   </p>
+					<p class="artist"></p>
+					<p class="song"></p>
+					<p class="album"></p>
 				</a>
 			</div>
 		</div>
@@ -68,7 +68,10 @@
 			}
 		</script>
 		<script>
-
+			/* is installed? */
+			if($('.artist').text() == "" && $('.album').text() == "" && $('.song').text() == ""){
+				$('h1').append('Check your installation!');
+			}
 		</script>
 	</body>
 </html>

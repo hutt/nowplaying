@@ -1,16 +1,18 @@
 <?php 
-/* LAST FM API */
-//paste your API Key here. Get it at http://last.fm/api
- $apikey = "";
-//type ypur last.fm username here.
- $lmuser = "";
-//Period for Top Tracks
-//Options: overall | 7day | 1month | 3month | 6month | 12month
- $period = "";
-/***************/
-
+	/* LAST FM API */
+	//paste your API Key here. Get it at http://last.fm/api
+	 $apikey = "";
+	//type your last.fm username here.
+	 $lmuser = "";
+	//Period / Top Tracks
+	//Options: overall | 7day | 1month | 3month | 6month | 12month
+	 $period = "";
+	/***************/
+	
 	function getSong($what){
-	    $filename = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=$lmuser$username&api_key=$apikey'; 
+		global $apikey, $lmuser;
+	
+	    $filename = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user='.$lmuser.'&api_key='.$apikey; 
 	     
 	    $xml = simplexml_load_file($filename);
 	    
@@ -26,7 +28,9 @@
     }
     
     function getNowplaying(){
-		$filename = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=$lmuser&api_key=$apikey'; 
+    	global $apikey, $lmuser;
+    	
+		$filename = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user='.$lmuser.'&api_key='.$apikey; 
 	     
     	$xml = simplexml_load_file($filename);
     	$np = $xml->recenttracks->track[0]->attributes();
@@ -38,7 +42,9 @@
     }
     
     function getCover($size){
-	    $filename = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=$lmuser&api_key=$apikey'; 
+    	global $apikey, $lmuser;
+    	
+	    $filename = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user='.$lmuser.'&api_key='.$apikey; 
 	     
     	$xml = simplexml_load_file($filename);
     	
@@ -56,9 +62,7 @@
 		    case 'extralarge':
 		    	$url = $image;
 		    	break;
-		   default:
-		   		$url = 'http://bulldogdata.com/wp-content/uploads/2012/08/symbol-error.png';
-		   		break;
+		    	
 		    }
 		}
     	
@@ -66,7 +70,9 @@
     }
     
     function getUrl(){
-	  	$filename = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=$lmuser&api_key=$apikey'; 
+    	global $apikey, $lmuser;
+    	
+	  	$filename = 'http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user='.$lmuser.'&api_key='.$apikey; 
 	     
     	$xml = simplexml_load_file($filename);
     	
@@ -74,7 +80,9 @@
     }
     
     function getTopArtists($num, $url){
-	    $filename = "http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=$lmuser&limit=".$num."&period=$period&api_key=$apikey";
+    	global $apikey, $lmuser, $period;
+    	
+	    $filename = 'http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user='.$lmuser.'&limit='.$num.'&period='.$period.'&api_key='.$apikey;
 	    
 	    $xml = simplexml_load_file($filename);
 	    

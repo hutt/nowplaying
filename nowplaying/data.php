@@ -48,10 +48,14 @@ if($nowplaying==true){
 }else{
 ?>
 			<h1><?php 
-			if($nowplaying == true){
-				echo "nowplaying";
+			if(empty($apikey) or empty($lmuser)){
+				echo "edit lastfm.php";
 			}else{
-				echo "lastplayed";
+				if($nowplaying == true){
+					echo "nowplaying";
+				}else{
+					echo "lastplayed";
+				}
 			}
 		?></h1>
 			<div id="top">Top this month: <a href="<?=$topartist1[1]?>" name="<?=$topartist1[0]?>" target="_blank"><?=$topartist1[0]?></a>, <a href="<?=$topartist2[1]?>" name="<?=$topartist2[0]?>" target="_blank"><?=$topartist2[0]?></a>, <a href="<?=$topartist3[1]?>" name="<?=$topartist3[0]?>" target="_blank"><?=$topartist3[0]?></a></div>
