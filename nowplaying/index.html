@@ -18,7 +18,11 @@
 		       	var artistBefore = $('.artist').text();
 		          $("#nowplaying").load('data.php', function(){
 		          	if((songBefore == $('.song').text() && artistBefore != $('.artist').text()) || (songBefore != $('.song').text() && artistBefore == $('.artist').text()) || (songBefore != $('.song').text() && artistBefore != $('.artist').text())){
-			          	notify();
+					setTimeout(
+					  function() 
+					  {
+					    notify();
+					 }, 5000);
 		          	}
 		          });
 		          $("#title").load('data.php?get=title');
