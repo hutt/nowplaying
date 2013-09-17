@@ -15,9 +15,14 @@ There's a picture included called 'festival.jpg'. I made the picture and allow y
 See additional information in the LICENSE file.
 
 ##preview
-![Preview](Preview.png "Preview (Safari on Mac OS X)")
-
 ![HTML5 Notifications in Safari](HTML5_Notifications.png "HTML5 Notifications (Safari)")
+HTML5 Notifications (Safari)
+
+![Preview](Preview_2.png "Preview 2 (Chrome on Mac OS X)")
+Preview (Chrome on Mac OS X)
+
+![Preview](Preview.png "Preview (Safari on Mac OS X)")
+Preview (Safari on Mac OS X)
 
 Visit my website for a [live preview](http://nowplaying.jh0.eu "live preview").
 
