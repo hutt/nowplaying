@@ -3,8 +3,6 @@ error_reporting(0);
 
 require_once("lastfm.php");
 
-	$domain = "http://jh0.eu";
-
 	$nowplaying = getNowplaying();
 	$track = array("name"=>getSong("name"), "artist"=>getSong("artist"), "album"=>getSong("album"));
 	$cover = getCover("medium");
@@ -62,7 +60,7 @@ if($nowplaying==true){
 					<div id="cover_overlay"></div>
 					<div id="cover">
 						<?php if($cover != ""){ ?>
-			<img class="boxShadow" alt="<?php echo $track['album']; ?>" src="<?=$cover?>" width="100" height="100" /><?php }else{ ?><img class="boxShadow" alt="Kein Cover gefunden" src="<?=$domain?>/startseite/qm.png" width="100" height="100" /><?php } ?>
+			<img class="boxShadow" alt="<?php echo $track['album']; ?>" src="<?=$cover?>" width="100" height="100" /><?php }else{ ?><img class="boxShadow" alt="Kein Cover gefunden" src="chord.png" width="100" height="100" /><?php } ?>
 					</div>
 					<p class="artist"><?php if($track['artist'] != ""){ echo $track['artist']; }else{ echo "Unbekannter K&uuml;nstler"; }?></p>
 					<p class="song"><?php if($track['name'] != ""){ echo $track['name']; }else{ echo "Unbekannter Titel"; }?></p>

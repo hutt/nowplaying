@@ -14,6 +14,10 @@ Works best with Safari or Google Chrome. WebKit recommended for best user-experi
 There's a picture included called 'festival.jpg'. I made the picture and allow you to use it in \#nowplaying however you want to but I would like you not to use it in a commercial way. Thank you!
 See additional information in the LICENSE file.
 
+##preview
+Visit my website for a [live preview](http://de.wikipedia.org/ "live preview").
+
 Have fun, 
+
 Jannis
 @Der_Hutt
