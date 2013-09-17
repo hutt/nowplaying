@@ -15,7 +15,7 @@ There's a picture included called 'festival.jpg'. I made the picture and allow y
 See additional information in the LICENSE file.
 
 ##preview
-Visit my website for a [live preview](http://de.wikipedia.org/ "live preview").
+Visit my website for a [live preview](http://nowplaying.jh0.eu "live preview").
 
 Have fun, 
 
