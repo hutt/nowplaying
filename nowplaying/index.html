@@ -1,0 +1,74 @@
+<!Doctype html>
+<html>
+	<head>
+		<title id="title">#nowplaying</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Jannis Hutt">
+		<link rel="stylesheet" href="np.css.php" type="text/css" />
+		<link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:300,400' rel='stylesheet' type='text/css'>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+	     $(document).ready(function() {
+	     
+		       $("#nowplaying").load("data.php");
+		       $("#title").load('data.php?get=title');
+		       
+		       var refreshMETA = setInterval(function() {
+		       	var songBefore = $('.song').text();
+		       	var artistBefore = $('.artist').text();
+		          $("#nowplaying").load('data.php', function(){
+		          	if(songBefore != $('.song').text()){
+			          	notify();	
+		          	}
+		          });
+		          $("#title").load('data.php?get=title');
+		       }, 2000);
+		       
+		       var refreshARTWORK = setInterval(function() {
+			      $('#stylesheet').load('data.php?get=stylesheet');
+		       }, 1000);
+		       
+	      });
+	      
+	      function notify(){
+			  if (window.webkitNotifications.checkPermission() == 0) {
+			    var notification = window.webkitNotifications.createNotification('chord.png', $(".song").text(), $(".artist").text());
+			    notification.show();
+			  } else {
+			    window.webkitNotifications.requestPermission();
+			  }
+		  }
+		</script>
+		<style id="stylesheet" type="text/css"></style>
+	</head>
+	<body>
+		<div id="blurredbg"></div>
+		<div id="nowplaying">
+			<h1>nowplaying</h1>
+			<div id="top">Top: </div>
+			<div id="info">
+				<a href="" target="_blank">
+					<div id="cover_overlay"></div>
+					<div id="cover">
+						<img src="" height="100px" width="100px" />
+					</div>
+					<p class="artist">             </p>
+					<p class="song">               </p>
+					<p class="album">                   </p>
+				</a>
+			</div>
+		</div>
+		 <script>
+			if (navigator.userAgent.match("MSIE")) {
+			var answer = confirm ("Du surfst mit dem Internet Explorer, ich empfehle zum Ansehen dieser Seite aber einen anderen Browser um volle Funktionalität sicherzustellen. Mal andere Browser erkunden?")
+			if (answer)
+			window.location = "http://www.whatbrowser.org/intl/de/";
+			else
+			alert ("Es funktioniert wahrscheinlich nicht einmal richtig mit dem Internet Explorer. Go, fuck yourself.")
+			}
+		</script>
+		<script>
+
+		</script>
+	</body>
+</html>
