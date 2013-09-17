@@ -16,6 +16,7 @@ See additional information in the LICENSE file.
 
 ##preview
 ![HTML5 Notifications in Safari](HTML5_Notifications.png "HTML5 Notifications (Safari)")
+
 HTML5 Notifications (Safari)
 
 ![Preview](Preview_2.png "Preview 2 (Chrome on Mac OS X)")
@@ -33,7 +34,7 @@ It gets the new meta information (song, album, artist, cover) every 4 seconds (t
 Change `$period`in `lastfm.php` to either `overall`, `7day`, `1month`, `3month`, `6month` or `12month`.
 ####I found a bug!
 [email me!](mailto:nowplaying@jh0.eu "write me an email!")
-
+***
 Have fun, 
 
 Jannis

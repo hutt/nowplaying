@@ -17,8 +17,8 @@
 		       	var songBefore = $('.song').text();
 		       	var artistBefore = $('.artist').text();
 		          $("#nowplaying").load('data.php', function(){
-		          	if(songBefore != $('.song').text()){
-			          	notify();	
+		          	if((songBefore == $('.song').text() && artistBefore != $('.artist').text()) || (songBefore != $('.song').text() && artistBefore == $('.artist').text()) || (songBefore != $('.song').text() && artistBefore != $('.artist').text())){
+			          	notify();
 		          	}
 		          });
 		          $("#title").load('data.php?get=title');
