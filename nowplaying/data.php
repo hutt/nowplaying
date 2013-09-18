@@ -3,6 +3,8 @@ error_reporting(0);
 
 require_once("lastfm.php");
 
+global $apikey, $lmuser;
+
 	$nowplaying = getNowplaying();
 	$track = array("name"=>getSong("name"), "artist"=>getSong("artist"), "album"=>getSong("album"));
 	$cover = getCover("medium");
@@ -48,8 +50,8 @@ if($nowplaying==true){
 }else{
 ?>
 			<h1><?php 
-			if(empty($apikey) or empty($lmuser)){
-				echo "edit lastfm.php";
+			if(empty($apikey) || empty($lmuser)){
+				echo "something went wrong.";
 			}else{
 				if($nowplaying == true){
 					echo "nowplaying";
