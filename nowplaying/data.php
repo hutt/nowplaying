@@ -29,7 +29,7 @@ if($nowplaying==true){
 }elseif(isset($_GET['get']) and $_GET['get'] == "stylesheet"){
 ?>
 	#blurredbg {
-		background-image: url('<?=$bgcover?>');
+		background-image: url('<?php echo $bgcover ?>');
 		-webkit-filter: blur(5px);
 		-moz-filter: blur(5px);
 		-ms-filter: blur(5px);
@@ -60,17 +60,17 @@ if($nowplaying==true){
 				}
 			}
 		?></h1>
-			<div id="top">Top this month: <a href="<?=$topartist1[1]?>" name="<?=$topartist1[0]?>" target="_blank"><?=$topartist1[0]?></a>, <a href="<?=$topartist2[1]?>" name="<?=$topartist2[0]?>" target="_blank"><?=$topartist2[0]?></a>, <a href="<?=$topartist3[1]?>" name="<?=$topartist3[0]?>" target="_blank"><?=$topartist3[0]?></a></div>
+			<div id="top">Top this month: <a href="<?php echo $topartist1[1] ?>" name="<?php echo $topartist1[0] ?>" target="_blank"><?php echo $topartist1[0] ?></a>, <a href="<?php echo $topartist2[1] ?>" name="<?php echo $topartist2[0] ?>" target="_blank"><?php echo $topartist2[0] ?></a>, <a href="<?php echo $topartist3[1] ?>" name="<?php echo $topartist3[0] ?>" target="_blank"><?php echo $topartist3[0] ?></a></div>
 			<div id="info">
-				<a href="<?=$url?>" target="_blank">
+				<a href="<?php echo $url ?>" target="_blank">
 					<div id="cover_overlay"></div>
 					<div id="cover">
-						<?php if($cover != ""){ ?>
-			<img class="boxShadow" alt="<?php echo $track['album']; ?>" src="<?=$cover?>" width="100" height="100" /><?php }else{ ?><img class="boxShadow" alt="Kein Cover gefunden" src="chord.png" width="100" height="100" /><?php } ?>
+						<?php if($cover != ""){  ?>
+			<img class="boxShadow" alt="<?php echo $track['album'];  ?>" src="<?php echo $cover ?>" width="100" height="100" /><?php }else{  ?><img class="boxShadow" alt="Kein Cover gefunden" src="chord.png" width="100" height="100" /><?php }  ?>
 					</div>
-					<p class="artist"><?php if($track['artist'] != ""){ echo $track['artist']; }else{ echo "Unbekannter K&uuml;nstler"; }?></p>
-					<p class="song"><?php if($track['name'] != ""){ echo $track['name']; }else{ echo "Unbekannter Titel"; }?></p>
-					<p class="album"><?php if($track['album'] != ""){ echo $track['album']; }else{ echo "Unbekanntes Album"; }?></p>
+					<p class="artist"><?php if($track['artist'] != ""){ echo $track['artist']; }else{ echo "Unbekannter K&uuml;nstler"; } ?></p>
+					<p class="song"><?php if($track['name'] != ""){ echo $track['name']; }else{ echo "Unbekannter Titel"; } ?></p>
+					<p class="album"><?php if($track['album'] != ""){ echo $track['album']; }else{ echo "Unbekanntes Album"; } ?></p>
 				</a>
 <?php
 }
