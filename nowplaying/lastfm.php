@@ -98,4 +98,32 @@
 	    }
 	    
     }
+    
+    function getPeriodMsg(){
+	    global $period;
+	    
+	    switch($period){
+		    case "overall":
+		    	return "Top";
+		    	break;
+		    case "7day":
+		    	return "Top this week";
+		    	break;
+		    case "1month":
+		    	return "Top this month";
+		    	break;
+		    case "3month":
+		    	return "Top (last 3 months)";
+		    	break;
+		    case "6month":
+		    	return "Top (last 6 months)";
+		    	break;
+		    case "12month":
+		    	return "Top (last 12 months)";
+		    	break;
+		    default:
+		    	return "Top (please check \$period in lastfm.php)";
+		    	break;
+	    }
+    }
 ?>

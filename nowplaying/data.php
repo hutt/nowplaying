@@ -60,7 +60,7 @@ if($nowplaying==true){
 				}
 			}
 		?></h1>
-			<div id="top">Top this month: <a href="<?php echo $topartist1[1] ?>" name="<?php echo $topartist1[0] ?>" target="_blank"><?php echo $topartist1[0] ?></a>, <a href="<?php echo $topartist2[1] ?>" name="<?php echo $topartist2[0] ?>" target="_blank"><?php echo $topartist2[0] ?></a>, <a href="<?php echo $topartist3[1] ?>" name="<?php echo $topartist3[0] ?>" target="_blank"><?php echo $topartist3[0] ?></a></div>
+			<div id="top"><?php echo getPeriodMsg(); ?>: <a href="<?php echo $topartist1[1] ?>" name="<?php echo $topartist1[0] ?>" target="_blank"><?php echo $topartist1[0] ?></a>, <a href="<?php echo $topartist2[1] ?>" name="<?php echo $topartist2[0] ?>" target="_blank"><?php echo $topartist2[0] ?></a>, <a href="<?php echo $topartist3[1] ?>" name="<?php echo $topartist3[0] ?>" target="_blank"><?php echo $topartist3[0] ?></a></div>
 			<div id="info">
 				<a href="<?php echo $url ?>" target="_blank">
 					<div id="cover_overlay"></div>
