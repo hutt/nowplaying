@@ -1,13 +1,25 @@
 <?php 
-	/* LAST FM API */
+/**
+	* lastfm api functions
+	*
+	* @copyright Copyright 2013 Jannis Hutt
+	* @link https://github.com/77u4/nowplaying
+	* @date 2013-08-13
+	* @license Apache License v2 (http://www.apache.org/licenses/LICENSE-2.0.txt)
+	* @author Jannis Hutt
+	* @package nowplaying
+
+	***************************************************************************
+**/
+   /* LAST FM API */
 	//paste your API Key here. Get it at http://last.fm/api
-	 $apikey = "";
+	 $apikey = "de14f62a0e7e330bcd192f8199aa75c6";
 	//type your last.fm username here.
-	 $lmuser = "";
+	 $lmuser = "ttuh";
 	//Period / Top Tracks
 	//Options: overall | 7day | 1month | 3month | 6month | 12month
-	 $period = "";
-	/***************/
+	 $period = "7day";
+   /* /LAST FM API */	 
 	
 	function getSong($what){
 		global $apikey, $lmuser;

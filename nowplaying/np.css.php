@@ -1,4 +1,14 @@
 <?php
+/**
+	* stylesheet
+	*
+	* @copyright Copyright 2013 Jannis Hutt
+	* @link https://github.com/77u4/nowplaying
+	* @date 2013-08-13
+	* @license Apache License v2 (http://www.apache.org/licenses/LICENSE-2.0.txt)
+	* @author Jannis Hutt
+	* @package nowplaying
+**/
 
 	header("Content-type: text/css");
 	require_once('lastfm.php');

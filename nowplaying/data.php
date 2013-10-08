@@ -1,4 +1,15 @@
 <?php
+/**
+	* data file, providing all information needed
+	*
+	* @copyright Copyright 2013 Jannis Hutt
+	* @link https://github.com/77u4/nowplaying
+	* @date 2013-08-13
+	* @license Apache License v2 (http://www.apache.org/licenses/LICENSE-2.0.txt)
+	* @author Jannis Hutt
+	* @package nowplaying
+**/
+
 error_reporting(0);
 
 require_once("lastfm.php");
@@ -68,9 +79,9 @@ if($nowplaying==true){
 						<?php if($cover != ""){  ?>
 			<img class="boxShadow" alt="<?php echo $track['album'];  ?>" src="<?php echo $cover ?>" width="100" height="100" /><?php }else{  ?><img class="boxShadow" alt="Kein Cover gefunden" src="chord.png" width="100" height="100" /><?php }  ?>
 					</div>
-					<p class="artist"><?php if($track['artist'] != ""){ echo $track['artist']; }else{ echo "Unbekannter K&uuml;nstler"; } ?></p>
-					<p class="song"><?php if($track['name'] != ""){ echo $track['name']; }else{ echo "Unbekannter Titel"; } ?></p>
-					<p class="album"><?php if($track['album'] != ""){ echo $track['album']; }else{ echo "Unbekanntes Album"; } ?></p>
+					<p class="artist"><?php if($track['artist'] != ""){ echo $track['artist']; }else{ echo "unknown artist"; } ?></p>
+					<p class="song"><?php if($track['name'] != ""){ echo $track['name']; }else{ echo "unknown title"; } ?></p>
+					<p class="album"><?php if($track['album'] != ""){ echo $track['album']; }else{ echo "unknown album"; } ?></p>
 				</a>
 <?php
 }
