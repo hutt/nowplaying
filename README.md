@@ -28,8 +28,8 @@ Preview (Safari on Mac OS X)
 Visit my website for a [live preview](http://nowplaying.jh0.eu "live preview").
 
 ##API
-I added an API file (`api.php`) for those who want to fetch their currently playing song easily. It supports three return formats, you can toggle them by using the ´mode´ parameter. 
-e.g.: ´http://nowplaying.your-website.com/api.php?mode=xml´.
+I added an API file (`api.php`) for those who want to fetch their currently playing song easily. It supports three return formats, you can toggle them by using the `mode` parameter. 
+e.g.: ´http://nowplaying.your-website.com/api.php?mode=xml`.
 ####JSON
 URL: `/api.php?mode=json`
 ```json
