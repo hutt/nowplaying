@@ -27,6 +27,37 @@ Preview (Safari on Mac OS X)
 
 Visit my website for a [live preview](http://nowplaying.jh0.eu "live preview").
 
+##API
+I added an API file (`api.php`) for those who want to fetch their currently playing song easily. It supports three return formats, you can toggle them by using the ´mode´ parameter. 
+e.g.: ´http://nowplaying.your-website.com/api.php?mode=xml´.
+####JSON
+URL: `/api.php?mode=json`
+```json
+{
+				"title": "Test The Limits",
+				"artist": "The Ghost Inside",
+				"album": "Get What You Give",
+				"coverUrl": "http://userserve-ak.last.fm/serve/300x300/77027328.png"
+}
+```
+####XML
+URL: `/api.php?mode=xml`
+```xml
+<nowplaying>
+	<title>Test The Limits</title>
+	<artist>The Ghost Inside</artist>
+	<album>Get What You Give</album>
+	<coverUrl>
+	http://userserve-ak.last.fm/serve/300x300/77027328.png
+	</coverUrl>
+</nowplaying>
+```
+####TXT
+URL: `/api.php?mode=txt`
+```
+now playing: Test The Limits by The Ghost Inside took from Get What You Give
+```
+
 ##FAQ
 ####Why does it take so long to refresh?
 It gets the new meta information (song, album, artist, cover) every 4 seconds (the background refreshes every 5 seconds) to save the lastfm API from getting overloaded. It's also more reliable when it takes longer. You can change it in `index.html` if you know, what you're doing.
