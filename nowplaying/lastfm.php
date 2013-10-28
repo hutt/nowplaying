@@ -13,12 +13,12 @@
 **/
    /* LAST FM API */
 	//paste your API Key here. Get it at http://last.fm/api
-	 $apikey = "de14f62a0e7e330bcd192f8199aa75c6";
+	 $apikey = "";
 	//type your last.fm username here.
-	 $lmuser = "ttuh";
+	 $lmuser = "";
 	//Period / Top Tracks
 	//Options: overall | 7day | 1month | 3month | 6month | 12month
-	 $period = "7day";
+	 $period = "";
    /* /LAST FM API */	 
 	
 	function getSong($what){
