@@ -26,11 +26,9 @@ Preview (Chrome on Mac OS X)
 Preview (Safari on Mac OS X)
 
 ![Preview](Preview_3.png "Preview 3 (Safari Fullscreen / iOS WebApp")
-
 Fullscreen WebApp on iPad 2
 
 ![Preview](Preview_3_Homescreen.png "Preview 3 (Safari Fullscreen / iOS WebApp - Homescreen")
-
 WebApp on Homescreen (iOS 7)
 
 Visit my website for a [live preview](http://nowplaying.jh0.eu "live preview").
