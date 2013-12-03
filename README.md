@@ -8,7 +8,7 @@ Upload the directory "nowplaying" on your webserver running PHP 5 (or higher). T
 ###Server
 PHP 5 or higher.
 ###Client
-Works best with Safari or Google Chrome. WebKit recommended for best user-experience. HTML5 notifications currently only running in Safari.
+Works best with Safari or Google Chrome. WebKit recommended for best user-experience. HTML5 notifications currently only running on Safari.
 
 ##copyright
 There's a picture included called 'festival.jpg'. I made the picture and allow you to use it in \#nowplaying however you want but I would like you not to use it in a commercial way or [mail me](mailto:nowplaying@jh0.eu "write me an email!") if you want to do so. Thank you!
@@ -22,8 +22,16 @@ HTML5 Notifications (Safari)
 ![Preview](Preview_2.png "Preview 2 (Chrome on Mac OS X)")
 Preview (Chrome on Mac OS X)
 
-![Preview](Preview.png "Preview (Safari on Mac OS X)")
+![Preview](Preview_1.png "Preview (Safari on Mac OS X)")
 Preview (Safari on Mac OS X)
+
+![Preview](Preview_3.png "Preview 3 (Safari Fullscreen / iOS WebApp")
+
+Fullscreen WebApp on iPad 2
+
+![Preview](Preview_3_Homescreen.png "Preview 3 (Safari Fullscreen / iOS WebApp - Homescreen")
+
+WebApp on Homescreen (iOS 7)
 
 Visit my website for a [live preview](http://nowplaying.jh0.eu "live preview").
 
