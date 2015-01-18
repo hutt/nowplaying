@@ -27,7 +27,7 @@ global $apikey, $lmuser;
 	
 	$bgcover = getCover("extralarge");
 
-	if($bgcover == "")$bgcover = "festival.jpg";
+	if($bgcover == "")$bgcover = getArtistPic($track['artist'], "medium");
 	
 if(isset($_GET['get']) and @$_GET['get'] == "title"){
 //Alternate title
@@ -77,7 +77,7 @@ if($nowplaying==true){
 					<div id="cover_overlay"></div>
 					<div id="cover">
 						<?php if($cover != ""){  ?>
-			<img class="boxShadow" alt="<?php echo $track['album'];  ?>" src="<?php echo $cover ?>" width="100" height="100" /><?php }else{  ?><img class="boxShadow" alt="Kein Cover gefunden" src="chord.png" width="100" height="100" /><?php }  ?>
+			<img class="boxShadow" alt="<?php echo $track['album'];  ?>" src="<?php echo $cover ?>" width="100" height="100" /><?php }else{  ?><img class="boxShadow" alt="no cover found" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="100" height="100" /><?php }  ?>
 					</div>
 					<p class="artist"><?php if($track['artist'] != ""){ echo $track['artist']; }else{ echo "unknown artist"; } ?></p>
 					<p class="song"><?php if($track['name'] != ""){ echo $track['name']; }else{ echo "unknown title"; } ?></p>
