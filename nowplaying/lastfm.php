@@ -8,7 +8,6 @@
 	* @license Apache License v2 (http://www.apache.org/licenses/LICENSE-2.0.txt)
 	* @author Jannis Hutt
 	* @package nowplaying
-
 	***************************************************************************
 **/
    /* LAST FM API */
@@ -111,6 +110,34 @@
 	    
     }
     
+    function getArtistPic($artist, $size){
+    	global $apikey;
+    	
+	    $filename = 'http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist='.$artist.'&api_key='.$apikey;
+	     
+    	$xml = simplexml_load_file($filename);
+    	
+		foreach ($xml->artist[0]->image as $image) {
+		    switch((string) $image['size']) { // Get attributes as element indices
+		    case 'small':
+		        $url = $image;
+		        break;
+		    case 'medium':
+		        $url = $image;
+		        break;
+		    case 'large':
+		    	$url = $image;
+		    	break;
+		    case 'extralarge':
+		    	$url = $image;
+		    	break;
+		    	
+		    }
+		}
+    	
+    	return $url;
+    }
+
     function getPeriodMsg(){
 	    global $period;
 	    
