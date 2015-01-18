@@ -25,9 +25,7 @@ global $apikey, $lmuser;
 	$topartist2 = getTopArtists(2,true);
 	$topartist3 = getTopArtists(3,true);
 	
-	$bgcover = getCover("extralarge");
-
-	if($bgcover == "")$bgcover = getArtistPic($track['artist'], "medium");
+	$bgcover = getArtistPic($track['artist'], "large");
 	
 if(isset($_GET['get']) and @$_GET['get'] == "title"){
 //Alternate title
