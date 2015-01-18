@@ -40,7 +40,7 @@ if($nowplaying==true){
 }elseif(isset($_GET['get']) and $_GET['get'] == "stylesheet"){
 ?>
 	#blurredbg {
-		background: url('<?php echo $bgcover ?>') no-repeat center center fixed;
+		background: url('<?php echo $bgcover ?>') no-repeat top top fixed;
 		-webkit-filter: blur(5px);
 		-moz-filter: blur(5px);
 		-ms-filter: blur(5px);
