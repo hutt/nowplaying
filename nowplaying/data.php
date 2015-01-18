@@ -40,7 +40,7 @@ if($nowplaying==true){
 }elseif(isset($_GET['get']) and $_GET['get'] == "stylesheet"){
 ?>
 	#blurredbg {
-		background-image: url('<?php echo $bgcover ?>');
+		background: url('<?php echo $bgcover ?>') no-repeat center center fixed;
 		-webkit-filter: blur(5px);
 		-moz-filter: blur(5px);
 		-ms-filter: blur(5px);
@@ -55,7 +55,10 @@ if($nowplaying==true){
 		height: 100%;
 		width: 100%;
 		overflow: hidden;
-		background-size: cover;
+   	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
 	}
 <?php
 }else{
